@@ -25,7 +25,7 @@ http://arduiniana.org.
 
 */
 
-#if defined(_AVR_MEGA__)
+#if defined(__AVR__)
 // 
 // Includes
 // 
@@ -121,5 +121,6 @@ size_t SoftwareSerialTX::write(const uint8_t *buffer, size_t size)
   }
   return n;
 }
-
+#else
+#error unsupported platform
 #endif
