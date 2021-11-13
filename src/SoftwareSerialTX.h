@@ -33,12 +33,8 @@ class SoftwareSerialTX
 {
 private:
   // per object data
-#ifdef ARDUINO_RASPBERRY_PI_PICO
-  uint8_t _transmitPin;  
-#else
   uint8_t _transmitBitMask;
   volatile uint8_t *_transmitPortRegister;
-#endif  
   uint16_t _tx_delay;
 
   // private methods
